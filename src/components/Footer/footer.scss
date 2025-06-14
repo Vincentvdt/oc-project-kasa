@@ -1,0 +1,32 @@
+footer {
+  display: flex;
+  width: 100%;
+  background: #000;
+  height: 209px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  gap: 7px;
+
+  @media (min-width: 1440px) {
+    gap: 28px
+  }
+
+  svg {
+    max-width: 122px;
+    max-height: 39.444px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 142.6%;
+    margin: 0;
+
+    @media (min-width: 1440px) {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+}

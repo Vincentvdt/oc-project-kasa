@@ -1,0 +1,17 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+main {
+  padding: 27px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+
+
+  @media (min-width: 1440px) {
+    padding: 43px 100px;
+    min-height: calc(100dvh - 209px - 113px - 86px); // 100dvh - Footer and Header heights - padding top and bottom
+  }
+}

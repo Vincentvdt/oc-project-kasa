@@ -1,0 +1,26 @@
+.accommodation-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 35px;
+  margin-top: 54px;
+  place-items: center;
+}
+@media (min-width: 768px) {
+  .accommodation-list {
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 60px;
+    border-radius: 25px;
+    background: #F6F6F6;
+    padding: 56px 50px;
+    margin-top: 43px;
+  }
+}
+@media (min-width: 1240px) {
+  .accommodation-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
