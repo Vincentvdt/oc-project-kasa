@@ -1,4 +1,4 @@
-# Kasa – OC Project 06 🏡
+# Kasa – OC Project 06 🏡 (Creative remix)
 
 React-powered apartment rental platform for a major French player in peer-to-peer housing.
 
