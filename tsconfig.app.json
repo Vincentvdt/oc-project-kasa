@@ -30,7 +30,7 @@
     },
     "allowJs": false,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"]
 }
