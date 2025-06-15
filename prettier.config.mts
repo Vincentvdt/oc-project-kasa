@@ -1,8 +1,8 @@
 import { type Config } from 'prettier';
 
 const config: Config = {
-  trailingComma: 'none',
-  semi: true,
+  trailingComma: 'es5',
+  semi: false,
   singleQuote: true,
   printWidth: 100,
   tabWidth: 2,
