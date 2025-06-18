@@ -1,6 +1,6 @@
 import styles from './HousingCard.module.css'
 import type { Logement } from '@/types/global.type.ts'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 interface HousingCardProps {
   logement: Logement

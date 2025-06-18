@@ -2,7 +2,7 @@ import styles from './Header.module.css'
 import logo from '@/assets/logo.svg'
 
 import clsx from 'clsx'
-import { Link, NavLink } from 'react-router'
+import { Link, NavLink } from 'react-router-dom'
 import Container from '@/components/Container/Container.tsx'
 
 const Header = () => {

@@ -1,5 +1,5 @@
 import styles from './LogementDetail.module.css'
-import { Link, useLoaderData, useLocation } from 'react-router'
+import { Link, useLoaderData, useLocation } from 'react-router-dom'
 
 import type { Logement } from '@/types/global.type'
 import {

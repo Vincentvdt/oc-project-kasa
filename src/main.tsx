@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import Layout from './Layout.tsx'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Home from '@/Home.tsx'
 import LogementDetail from '@/pages/LogementDetail.tsx'
 import NotFound from '@/pages/NotFound.tsx'
