@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    padding: 24px 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px 16px 0 0;
+    background: #222;
+}
+
+@media (max-width: 1440px) {
+    .footer {
+        border-radius: 16px;
+        margin: 16px;
+        width: unset;
+    }
+}
+
+
+.logo {
+    max-height: 40px;
+    display: block;
+}
+
+.copyright {
+    color: #EBEBEB;
+    font-weight: 500;
+
+}

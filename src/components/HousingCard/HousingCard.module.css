@@ -1,0 +1,61 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    gap: 12px;
+    overflow: visible;
+    transition: 250ms ease-in-out;
+}
+
+.card:hover img, .card:focus-visible img {
+    outline: 2px solid rgba(122, 122, 122, 1);
+    border: 1px solid rgba(255, 96, 96, 0);
+}
+
+.card:focus-visible {
+    outline: none;
+    gap: 16px;
+}
+
+.card:hover h4, .card:focus-visible h4 {
+    color: #ff6347;
+}
+
+.card:hover p, .card:focus-visible p {
+    color: #222;
+}
+
+
+.cover {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 96, 96, 0.25);
+    aspect-ratio: 4 / 4;
+    object-fit: cover;
+    display: block;
+    transition: outline 250ms linear;
+    outline: 2px solid rgba(122, 122, 122, 0);
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.title {
+    color: #222;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: 180ms ease-in-out;
+}
+
+.location {
+    color: #666;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: 80ms ease-in-out;
+}
