@@ -1,7 +1,7 @@
 import Container from '@/components/Container/Container.tsx'
 import styles from './Footer.module.css'
 import logo from '@/assets/logo-white.svg'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (

@@ -1,4 +1,4 @@
-import type { LoaderFunction } from 'react-router'
+import type { LoaderFunction } from 'react-router-dom'
 import type { Logement } from '@/types/global.type'
 
 export const logementLoader: LoaderFunction = async ({ params }) => {
