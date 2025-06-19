@@ -1,6 +1,7 @@
 import styles from './HousingCard.module.css'
 import type { Logement } from '@/types/global.type.ts'
 import { Link } from 'react-router-dom'
+import { memo } from 'react'
 
 interface HousingCardProps {
   logement: Logement
@@ -18,4 +19,4 @@ const HousingCard = ({ logement }: HousingCardProps) => {
   )
 }
 
-export default HousingCard
+export default memo(HousingCard)

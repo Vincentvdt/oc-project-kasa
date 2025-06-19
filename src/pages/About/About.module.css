@@ -25,13 +25,17 @@
 
 /* Mask Layer */
 .textMask {
-  font-size: 5rem;
-  font-weight: bold;
-  line-height: 1.2;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   text-transform: capitalize;
+}
+
+.textMask h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .content {

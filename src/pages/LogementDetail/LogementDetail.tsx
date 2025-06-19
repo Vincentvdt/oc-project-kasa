@@ -10,6 +10,7 @@ import {
   StarFilledIcon,
 } from '@radix-ui/react-icons'
 import Button from '@/components/Button/Button.tsx'
+import { chunkArray } from '@/utils/chunkArray'
 
 const LogementDetail = () => {
   const navigation = useNavigation()
@@ -17,13 +18,8 @@ const LogementDetail = () => {
   const loaderLogement = useLoaderData() as Logement
   const logement = state?.logement ?? loaderLogement
 
-  const rating = useMemo(() => Number(logement.rating).toFixed(2), [logement.rating])
-  const equipmentChunks = useMemo(() => {
-    const chunkSize = 5
-    return Array.from({ length: Math.ceil(logement.equipments.length / chunkSize) }, (_, i) =>
-      logement.equipments.slice(i * chunkSize, (i + 1) * chunkSize)
-    )
-  }, [logement.equipments])
+  const formattedRating = useMemo(() => Number(logement.rating).toFixed(2), [logement.rating])
+  const equipmentChunks = useMemo(() => chunkArray(logement.equipments, 5), [logement.equipments])
 
   if (navigation.state === 'loading') {
     return <p>Chargement du logement...</p>
@@ -70,7 +66,7 @@ const LogementDetail = () => {
               <div className={styles.hostMeta}>
                 <p className={styles.hostName}>{logement.host.name}</p>
                 <span className={styles.rating}>
-                  <StarFilledIcon /> {rating} (5 avis)
+                  <StarFilledIcon /> {formattedRating} (5 avis)
                 </span>
                 <Link to="/" className={styles.hostProfileLink}>
                   voir profil
@@ -99,7 +95,7 @@ const LogementDetail = () => {
               ))}
             </ul>
             <span className={styles.rating}>
-              <StarFilledIcon /> {rating} (5 avis)
+              <StarFilledIcon /> {formattedRating} (5 avis)
             </span>
           </div>
         </header>
