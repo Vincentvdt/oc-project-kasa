@@ -1,21 +1,12 @@
 import styles from './Home.module.css'
 import { CheckIcon, GlobeIcon, HomeIcon } from '@radix-ui/react-icons'
-import { useEffect, useState } from 'react'
-import type { Logement } from '@/types/global.type.ts'
 import HousingCard from '@/components/HousingCard/HousingCard.tsx'
-import { getLogements } from '@/api/logements.ts'
+import { useMemo } from 'react'
+import { useLogements } from '@/hooks/useLogements'
 
 const Home = () => {
-  const [logements, setLogements] = useState<Logement[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    getLogements()
-      .then((data) => setLogements(data))
-      .catch(() => setError('Failed to fetch logements'))
-      .finally(() => setLoading(false))
-  }, [])
+  const { logements, loading, error } = useLogements()
+  const displayedLogements = useMemo(() => logements.slice(0, 10), [logements])
 
   return (
     <section className={styles.section}>
@@ -48,9 +39,9 @@ const Home = () => {
         <div className={styles.grid}>
           {!loading &&
             !error &&
-            logements
-              .slice(0, 10)
-              .map((logement) => <HousingCard key={logement.id} logement={logement} />)}
+            displayedLogements.map((logement) => (
+              <HousingCard key={logement.id} logement={logement} />
+            ))}
         </div>
       </div>
     </section>

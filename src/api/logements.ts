@@ -14,9 +14,7 @@ export const getLogements = async (): Promise<Logement[]> => {
   return data
 }
 
-export const getLogementById = async (
-  id: string
-): Promise<Logement | undefined> => {
+export const getLogementById = async (id: string): Promise<Logement | undefined> => {
   const logements = await getLogements()
   return logements.find((item) => item.id === id)
 }

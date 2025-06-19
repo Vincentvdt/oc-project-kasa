@@ -1,6 +1,7 @@
 import { Link, isRouteErrorResponse, useRouteError } from 'react-router-dom'
 import Header from '@/components/Header/Header.tsx'
 import Footer from '@/components/Footer/Footer.tsx'
+import { memo } from 'react'
 
 const NotFound = () => {
   const error = useRouteError()
@@ -38,4 +39,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default memo(NotFound)
