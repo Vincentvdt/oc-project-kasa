@@ -6,6 +6,7 @@ import Home from '@/pages/Home/Home.tsx'
 import LogementDetail from '@/pages/LogementDetail/LogementDetail.tsx'
 import NotFound from '@/pages/NotFound/NotFound.tsx'
 import { logementLoader } from '@/loaders/logement.loader.ts'
+import About from '@/pages/About/About.tsx'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: '/about',
+        element: <About />,
       },
       {
         path: 'logement/:id',

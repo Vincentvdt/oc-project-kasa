@@ -95,7 +95,7 @@
     span {
         color: #222;
         text-align: right;
-        font-size: 0.75rem;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 140%;
         transition: color 0.2s ease;
@@ -206,7 +206,7 @@
     justify-content: center;
     align-items: center;
     color: #666;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 142.6%;
@@ -228,7 +228,7 @@
 .hostProfileLink {
     color: #000;
     text-align: right;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 140%; /* 16.8px */
@@ -289,7 +289,7 @@
     background: #D9D9D9;
     color: #222;
     text-align: right;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
@@ -330,7 +330,7 @@
     color: #FF5B5B;
 
     white-space: nowrap;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: 142.6%; /* 17.112px */
@@ -365,7 +365,7 @@
     p {
         flex: 1 0 0;
         color: #666;
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 140%;
     }
@@ -392,7 +392,7 @@
 
 .equipmentColumn li {
     color: #222;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 140%; /* 19.6px */
     text-transform: capitalize;
@@ -410,7 +410,7 @@
 
 .logementId {
     color: rgba(102, 102, 102, 0.84);
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 140%; /* 16.8px */
@@ -437,7 +437,7 @@
     span {
         color: rgba(102, 102, 102, 0.84);
         text-align: right;
-        font-size: 0.75rem;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: 140%;

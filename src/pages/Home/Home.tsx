@@ -36,8 +36,8 @@ const Home = () => {
             </span>
           </div>
           <h2 className={styles.subtitle}>
-            Trouvez un logement à votre image, parmi <br /> nos annonces vérifiées, alliant confort,{' '}
-            sécurité et liberté.
+            Trouvez un logement a votre image, parmi <br /> nos annonces verifiees, entre confort,
+            securite et liberte.
           </h2>
         </div>
       </div>
