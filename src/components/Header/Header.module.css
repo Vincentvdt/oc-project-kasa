@@ -1,14 +1,14 @@
 .root {
-    padding: 32px 0;
+    padding: 2rem 0;
     border-bottom: 1px solid #ebebeb;
     background-color: #fcfcfc;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.01);
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width: 90rem) {
     .root {
-        padding: 32px 40px
+        padding: 2rem 2.5rem
     }
 }
 
@@ -24,12 +24,12 @@
 .left {
     display: flex;
     align-items: center;
-    gap: 96px;
+    gap: 6rem;
 }
 
 .nav {
     display: flex;
-    gap: 48px;
+    gap: 3rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -67,13 +67,13 @@
 
 .right {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
     align-items: center;
 }
 
 
 .logo {
-    max-height: 40px;
+    max-height: 2.5rem;
     display: block;
 }
 

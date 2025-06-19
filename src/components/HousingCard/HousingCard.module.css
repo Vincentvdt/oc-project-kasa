@@ -3,7 +3,7 @@
     flex-direction: column;
     height: 100%;
     cursor: pointer;
-    gap: 12px;
+    gap: 0.75rem;
     overflow: visible;
     transition: 250ms ease-in-out;
 }
@@ -15,7 +15,7 @@
 
 .card:focus-visible {
     outline: none;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .card:hover h4, .card:focus-visible h4 {
@@ -28,7 +28,7 @@
 
 
 .cover {
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border: 1px solid rgba(255, 96, 96, 0.25);
     aspect-ratio: 4 / 4;
     object-fit: cover;
@@ -46,7 +46,7 @@
 
 .title {
     color: #222;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.4;
     transition: 180ms ease-in-out;
@@ -54,7 +54,7 @@
 
 .location {
     color: #666;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.4;
     transition: 80ms ease-in-out;

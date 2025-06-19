@@ -1,23 +1,23 @@
 .footer {
     display: flex;
-    padding: 24px 40px;
+    padding: 1.5rem 2.5rem;
     justify-content: space-between;
     align-items: center;
-    border-radius: 16px 16px 0 0;
+    border-radius: 1rem 1rem 0 0;
     background: #222;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 90rem) {
     .footer {
-        border-radius: 16px;
-        margin: 16px;
+        border-radius: 1rem;
+        margin: 1rem;
         width: unset;
     }
 }
 
 
 .logo {
-    max-height: 40px;
+    max-height: 2.5rem;
     display: block;
 }
 
