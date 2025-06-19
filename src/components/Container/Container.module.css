@@ -18,9 +18,3 @@
     width: 100%;
 }
 
-@media (max-width: 1024px) {
-    .inner,
-    .container {
-        padding: 0 16px;
-    }
-}

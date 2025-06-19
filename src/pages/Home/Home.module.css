@@ -3,7 +3,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 48px 40px;
+    padding: 48px clamp(1rem, 3vw, 2.5rem);
     align-items: flex-start;
     gap: 48px;
     flex: 1 0 0;
@@ -23,7 +23,7 @@
 
 .title {
     color: #222;
-    font-size: 4rem;
+    font-size: clamp(2rem, 3vw, 4rem);
     font-weight: 600;
     text-transform: capitalize;
     margin: 0;
@@ -118,7 +118,7 @@
     grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
@@ -126,8 +126,18 @@
 }
 
 @media (max-width: 600px) {
+    
+
+    .sectionHeader {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
     }
 }
 

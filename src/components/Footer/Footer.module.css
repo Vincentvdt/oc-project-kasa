@@ -7,14 +7,6 @@
     background: #222;
 }
 
-@media (max-width: 1440px) {
-    .footer {
-        border-radius: 16px;
-        margin: 16px;
-        width: unset;
-    }
-}
-
 
 .logo {
     max-height: 40px;
@@ -25,4 +17,40 @@
     color: #EBEBEB;
     font-weight: 500;
 
+}
+
+@media (max-width: 1440px) {
+    .footer {
+        border-radius: 0;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 16px 24px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .logo {
+        max-height: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 12px 8px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        max-height: 24px;
+    }
+
+    .copyright {
+        font-size: 12px;
+        text-align: center;
+    }
 }
