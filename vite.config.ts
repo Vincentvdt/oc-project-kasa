@@ -4,7 +4,7 @@ import path from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'oc-project-kasa',
+  base: '/oc-project-kasa/',
   plugins: [react()],
   resolve: {
     alias: {
