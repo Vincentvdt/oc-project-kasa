@@ -9,27 +9,25 @@ import {
   Share2Icon,
   StarFilledIcon,
 } from '@radix-ui/react-icons'
+import Button from '@/components/Button/Button.tsx'
 
 const LogementDetail = () => {
   const { state } = useLocation() as { state?: { logement?: Logement } }
   const loaderLogement = useLoaderData() as Logement
   const logement = state?.logement ?? loaderLogement
 
-  const rating = useMemo(
-    () => Number(logement.rating).toFixed(2),
-    [logement.rating]
-  )
+  const rating = useMemo(() => Number(logement.rating).toFixed(2), [logement.rating])
   const equipmentChunks = useMemo(() => {
     const chunkSize = 5
-    return Array.from(
-      { length: Math.ceil(logement.equipments.length / chunkSize) },
-      (_, i) => logement.equipments.slice(i * chunkSize, (i + 1) * chunkSize)
+    return Array.from({ length: Math.ceil(logement.equipments.length / chunkSize) }, (_, i) =>
+      logement.equipments.slice(i * chunkSize, (i + 1) * chunkSize)
     )
   }, [logement.equipments])
 
   return (
     <div className={styles.detailPage}>
       <section className={styles.gallerySection}>
+        <h1 className={styles.titleMobile}>{logement.title}</h1>
         <div className={styles.gallery}>
           <img
             className={styles.mainImage}
@@ -74,7 +72,7 @@ const LogementDetail = () => {
                 </Link>
               </div>
             </div>
-            <button className={styles.messageButton}>Envoyer un message</button>
+            <Button>Envoyer un message</Button>
           </div>
         </div>
       </section>
