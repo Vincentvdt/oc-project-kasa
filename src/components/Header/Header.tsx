@@ -1,9 +1,11 @@
 import styles from './Header.module.css'
+import btnStyles from '../Button/Button.module.css'
 import logo from '@/assets/logo.svg'
 
 import clsx from 'clsx'
 import { Link, NavLink } from 'react-router-dom'
 import Container from '@/components/Container/Container.tsx'
+import { PersonIcon } from '@radix-ui/react-icons'
 
 const Header = () => {
   return (
@@ -34,14 +36,17 @@ const Header = () => {
         </nav>
       </div>
       <div className={styles.right}>
-        <Link to="/" className={clsx(styles.button, styles.red)}>
+        <Link to="/" className={`${btnStyles.btn} ${btnStyles.red}`}>
           {' '}
           Login
         </Link>
-        <Link to="/" className={clsx(styles.button, styles.black)}>
+        <Link to="/" className={btnStyles.btn}>
           {' '}
           Get Started
         </Link>
+        <div className={styles.profileIcon}>
+          <PersonIcon />
+        </div>
       </div>
     </Container>
   )

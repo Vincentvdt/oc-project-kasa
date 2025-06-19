@@ -1,5 +1,6 @@
-import styles from './LogementDetail.module.css'
+import { useMemo } from 'react'
 import { Link, useLoaderData, useLocation } from 'react-router-dom'
+import styles from './LogementDetail.module.css'
 
 import type { Logement } from '@/types/global.type'
 import {
@@ -8,39 +9,46 @@ import {
   Share2Icon,
   StarFilledIcon,
 } from '@radix-ui/react-icons'
+import Button from '@/components/Button/Button.tsx'
 
 const LogementDetail = () => {
-  const location = useLocation()
-  const loaderLogement = useLoaderData<Logement>()
-  const logement: Logement = location.state?.logement ?? loaderLogement
+  const { state } = useLocation() as { state?: { logement?: Logement } }
+  const loaderLogement = useLoaderData() as Logement
+  const logement = state?.logement ?? loaderLogement
 
-  const equipmentChunks = Array.from(
-    { length: Math.ceil(logement.equipments.length / 5) },
-    (_, i) => logement.equipments.slice(i * 5, i * 5 + 5)
-  )
+  const rating = useMemo(() => Number(logement.rating).toFixed(2), [logement.rating])
+  const equipmentChunks = useMemo(() => {
+    const chunkSize = 5
+    return Array.from({ length: Math.ceil(logement.equipments.length / chunkSize) }, (_, i) =>
+      logement.equipments.slice(i * chunkSize, (i + 1) * chunkSize)
+    )
+  }, [logement.equipments])
 
   return (
     <div className={styles.detailPage}>
       <section className={styles.gallerySection}>
+        <h1 className={styles.titleMobile}>{logement.title}</h1>
         <div className={styles.gallery}>
           <img
             className={styles.mainImage}
             src={logement.pictures[0]}
             alt={`Vue principale du logement "${logement.title}"`}
+            loading="lazy"
           />
           <div className={styles.thumbnailRow}>
             {logement.pictures.slice(1, 4).map((src, index) => (
               <img
-                key={index}
+                key={src}
                 className={styles.thumbnail}
                 src={src}
                 alt={`Photo ${index + 2} du logement`}
+                loading="lazy"
               />
             ))}
           </div>
         </div>
         <button className={styles.showAllPhotosButton} aria-label="Afficher toutes les photos">
-          <DragHandleDots1Icon />
+          <DragHandleDots1Icon aria-hidden="true" />
           <span>Afficher toutes les photos</span>
         </button>
 
@@ -52,18 +60,19 @@ const LogementDetail = () => {
                 className={styles.hostAvatar}
                 src={logement.host.picture}
                 alt={`Photo de ${logement.host.name}`}
+                loading="lazy"
               />
               <div className={styles.hostMeta}>
                 <p className={styles.hostName}>{logement.host.name}</p>
                 <span className={styles.rating}>
-                  <StarFilledIcon /> {Number(logement.rating).toFixed(2)} (5 avis)
+                  <StarFilledIcon /> {rating} (5 avis)
                 </span>
                 <Link to="/" className={styles.hostProfileLink}>
                   voir profil
                 </Link>
               </div>
             </div>
-            <button className={styles.messageButton}>Envoyer un message</button>
+            <Button>Envoyer un message</Button>
           </div>
         </div>
       </section>
@@ -71,10 +80,10 @@ const LogementDetail = () => {
         <header className={styles.header}>
           <div className={styles.info}>
             <h1 className={styles.title}>{logement.title}</h1>
-            <a href="#" className={styles.shareLink} aria-label="Partager l'annonce">
-              <Share2Icon />
+            <button type="button" className={styles.shareLink} aria-label="Partager l'annonce">
+              <Share2Icon aria-hidden="true" />
               <span>Partager</span>
-            </a>
+            </button>
           </div>
           <div className={styles.meta}>
             <ul className={styles.tags}>
@@ -85,7 +94,7 @@ const LogementDetail = () => {
               ))}
             </ul>
             <span className={styles.rating}>
-              <StarFilledIcon /> {Number(logement.rating).toFixed(2)} (5 avis)
+              <StarFilledIcon /> {rating} (5 avis)
             </span>
           </div>
         </header>
@@ -116,7 +125,7 @@ const LogementDetail = () => {
         <div className={styles.footerRow}>
           <span className={styles.logementId}>ID: {logement.id}</span>
           <button className={styles.reportButton} aria-label="Signaler cette annonce">
-            <ExclamationTriangleIcon />
+            <ExclamationTriangleIcon aria-hidden="true" />
             <span>Signaler cette annonce</span>
           </button>
         </div>
