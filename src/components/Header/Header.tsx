@@ -39,11 +39,11 @@ const Header = () => {
       <div className={styles.right}>
         <Link to="/" className={`${btnStyles.btn} ${btnStyles.red}`}>
           {' '}
-          Login
+          Connexion
         </Link>
         <Link to="/" className={btnStyles.btn}>
           {' '}
-          Get Started
+          Commencer
         </Link>
         <div className={styles.profileIcon}>
           <PersonIcon />
