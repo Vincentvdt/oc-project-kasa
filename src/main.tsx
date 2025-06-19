@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import Layout from '@/components/Layout/Layout.tsx'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from '@/pages/Home/Home.tsx'
 import LogementDetail from '@/pages/LogementDetail/LogementDetail.tsx'
 import NotFound from '@/pages/NotFound/NotFound.tsx'
@@ -11,6 +11,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
@@ -20,14 +21,13 @@ const router = createBrowserRouter([
         path: 'logement/:id',
         element: <LogementDetail />,
         loader: logementLoader,
-        errorElement: <NotFound />,
+      },
+      {
+        path: '404',
+        element: <NotFound />,
       },
       {
         path: '*',
-        element: <Navigate to="/404" replace />,
-      },
-      {
-        path: '/404',
         element: <NotFound />,
       },
     ],
