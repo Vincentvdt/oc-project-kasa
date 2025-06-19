@@ -3,7 +3,7 @@
     flex-direction: column;
     height: 100%;
     cursor: pointer;
-    gap: 0.75rem;
+    gap: 12px;
     overflow: visible;
     transition: 250ms ease-in-out;
 }
@@ -15,7 +15,7 @@
 
 .card:focus-visible {
     outline: none;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .card:hover h4, .card:focus-visible h4 {
@@ -28,7 +28,7 @@
 
 
 .cover {
-    border-radius: 0.5rem;
+    border-radius: 8px;
     border: 1px solid rgba(255, 96, 96, 0.25);
     aspect-ratio: 4 / 4;
     object-fit: cover;

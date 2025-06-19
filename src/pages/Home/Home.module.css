@@ -3,18 +3,18 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 3rem 2.5rem;
+    padding: 48px 40px;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 48px;
     flex: 1 0 0;
     align-self: stretch;
-    border-radius: 1rem;
+    border-radius: 16px;
     background: #EDEBE9;
 }
 
 .sectionHeader {
     display: flex;
-    gap: 4rem;
+    gap: 64px;
     margin: 0;
     align-self: stretch;
     grid-template-rows: repeat(1, minmax(0, 1fr));
@@ -36,14 +36,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 16px;
     align-self: stretch;
 }
 
 .iconList {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .subtitle {
@@ -56,8 +56,8 @@
 
 .icon {
     display: flex;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 40px;
+    height: 40px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,7 @@
     background: #FFF;
 
     svg {
-        height: 1rem;
+        height: 16px;
         width: auto;
         flex-shrink: 0;
 
@@ -82,7 +82,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 16px;
     flex: 1 0 0;
     align-self: stretch;
 
@@ -92,14 +92,14 @@
         margin: 0;
         font-weight: 500;
         line-height: 142.6%;
-        padding-left: 1rem;
+        padding-left: 16px;
         position: relative;
 
         &:before {
             content: '';
             position: absolute;
-            width: 0.25rem;
-            height: 1.5rem;
+            width: 4px;
+            height: 24px;
             background-color: #FF6060;
             left: 0;
             top: 50%;
@@ -110,23 +110,24 @@
 
 .grid {
     display: grid;
-    row-gap: 0.625rem;
-    column-gap: 1rem;
+    row-gap: 10px;
+    column-gap: 16px;
     flex: 1 0 0;
     align-self: stretch;
     grid-template-rows: repeat(2, minmax(0, 1fr));
     grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-@media (max-width: 56.25rem) {
+@media (max-width: 900px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
     }
 }
 
-@media (max-width: 37.5rem) {
+@media (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
     }
 }
+

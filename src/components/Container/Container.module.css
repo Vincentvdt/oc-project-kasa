@@ -6,21 +6,21 @@
 
 /* The actual container inside a fullWidth wrapper */
 .inner {
-    max-width: 90rem;
+    max-width: 1440px;
     margin: 0 auto;
     width: 100%;
 }
 
 
 .container {
-    max-width: 90rem;
+    max-width: 1440px;
     margin: 0 auto;
     width: 100%;
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
     .inner,
     .container {
-        padding: 0 1rem;
+        padding: 0 16px;
     }
 }

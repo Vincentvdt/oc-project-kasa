@@ -1,11 +1,11 @@
 .btn {
-    border-radius: 0.5rem;
+    border-radius: 8px;
     background: #222;
     display: flex;
-    padding: 0.75rem 1.1875rem;
+    padding: 12px 19px;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
+    gap: 10px;
     color: #D9D9D9;
     font-size: clamp(0.75rem, 1.4vw, 0.875rem);
     font-weight: 500;
@@ -16,8 +16,8 @@
 
 
     svg {
-        width: 1rem;
-        height: 1rem;
+        width: 16px;
+        height: 16px;
         transition: transform 0.2s ease;
         flex-shrink: 0;
         fill: currentColor;
@@ -30,13 +30,13 @@
 
     }
 
-    @media (max-width: 30rem) {
-        padding: 0.625rem 0.875rem;
+    @media (max-width: 480px) {
+        padding: 10px 14px;
         font-size: 0.75rem;
 
         svg {
-            width: 0.875rem;
-            height: 0.875rem;
+            width: 14px;
+            height: 14px;
         }
     }
 }
@@ -51,4 +51,3 @@
 
     }
 }
-
