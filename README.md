@@ -74,7 +74,17 @@ Not a core feature, just something I tried out along the way.
 1. Clone this repo  
 2. Run `npm install`  
 3. Run `npm run dev` to launch locally  
-4. Build with `npm run build` for production  
+4. Build with `npm run build` for production
+
+## 🚀 Deployment
+
+Deploy to GitHub Pages in one step:
+
+```bash
+npm run deploy
+```
+
+This builds the app and publishes the `dist` folder to the `gh-pages` branch, making it accessible at `https://<your-github-username>.github.io/oc-project-kasa/`.
 
 ## 📚 Credits
 

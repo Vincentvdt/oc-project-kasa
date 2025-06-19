@@ -5,7 +5,7 @@ let logementsCache: Logement[] | null = null
 export const getLogements = async (): Promise<Logement[]> => {
   if (logementsCache) return logementsCache
 
-  const res = await fetch('/data/logements.json')
+  const res = await fetch(`${import.meta.env.BASE_URL}data/logements.json`)
   if (!res.ok) {
     throw new Error('Failed to fetch logements')
   }
