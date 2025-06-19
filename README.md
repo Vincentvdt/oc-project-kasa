@@ -44,7 +44,7 @@ My job here was to *integrate everything faithfully* and build a scalable, compo
 
 ## 📸 Preview
 
-- [Live Demo (Personal Rework)](https://vincentvdt.github.io/oc-project-06-kasa/)
+- [Live Demo (Personal Rework)](https://vincentvdt.github.io/oc-project-kasa/)
 
 ## 💬 Evaluation
 
