@@ -44,8 +44,7 @@ My job here was to *integrate everything faithfully* and build a scalable, compo
 
 ## 📸 Preview
 
-- [Live Demo (Evaluation Version)](https://vincentvdt.github.io/oc-project-06-kasa-eval/)  
-- [Live Demo (Personal Rework)](https://vincentvdt.github.io/oc-project-06-kasa-remix/)
+- [Live Demo (Personal Rework)](https://vincentvdt.github.io/oc-project-06-kasa/)
 
 ## 💬 Evaluation
 
@@ -83,4 +82,4 @@ Not a core feature, just something I tried out along the way.
 
 ---
 
-💡 Bonus tip: If you’re viewing this repo and want to compare styles or behavior between the **strict brief** and **creative remix**, switch branches or check out both deployed versions. Pick your favorite!
+💡 Bonus tip: If you’re viewing this repo and want to compare styles or behavior between the **strict brief** and **creative remix**, switch branches. Pick your favorite!
