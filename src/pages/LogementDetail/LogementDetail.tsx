@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Link, useLoaderData, useLocation } from 'react-router-dom'
+import { Link, useLoaderData, useLocation, useNavigation } from 'react-router-dom'
 import styles from './LogementDetail.module.css'
 
 import type { Logement } from '@/types/global.type'
@@ -12,6 +12,7 @@ import {
 import Button from '@/components/Button/Button.tsx'
 
 const LogementDetail = () => {
+  const navigation = useNavigation()
   const { state } = useLocation() as { state?: { logement?: Logement } }
   const loaderLogement = useLoaderData() as Logement
   const logement = state?.logement ?? loaderLogement
@@ -23,6 +24,10 @@ const LogementDetail = () => {
       logement.equipments.slice(i * chunkSize, (i + 1) * chunkSize)
     )
   }, [logement.equipments])
+
+  if (navigation.state === 'loading') {
+    return <p>Chargement du logement...</p>
+  }
 
   return (
     <div className={styles.detailPage}>
