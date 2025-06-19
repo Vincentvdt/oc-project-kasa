@@ -1,5 +1,4 @@
 import type { LoaderFunction } from 'react-router-dom'
-import type { Logement } from '@/types/global.type'
 import { getLogementById } from '@/api/logements.ts'
 
 export const logementLoader: LoaderFunction = async ({ params }) => {
