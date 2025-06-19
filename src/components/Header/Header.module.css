@@ -19,7 +19,7 @@
 
 .inner {
   display: flex;
-  justify-content: space-between !important;
+  justify-content: space-between;
 }
 
 .left {
@@ -106,7 +106,7 @@
 @media (max-width: 1024px) {
   .inner {
     position: relative;
-    justify-content: center !important;
+    justify-content: center;
   }
 
   .left {
