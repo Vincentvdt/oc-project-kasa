@@ -1,13 +1,14 @@
 import styles from './About.module.css'
+import { memo } from 'react'
 
-const AboutCard = ({ title, text }: { title: string; text: string }) => {
+const AboutCard = memo(({ title, text }: { title: string; text: string }) => {
   return (
     <div className={styles.card}>
       <h2>{title}</h2>
       <p>{text}</p>
     </div>
   )
-}
+})
 
 const values = [
   {
@@ -66,4 +67,4 @@ const About = () => {
   )
 }
 
-export default About
+export default memo(About)

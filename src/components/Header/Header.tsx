@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { Link, NavLink } from 'react-router-dom'
 import Container from '@/components/Container/Container.tsx'
 import { PersonIcon } from '@radix-ui/react-icons'
+import { memo } from 'react'
 
 const Header = () => {
   return (
@@ -52,4 +53,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default memo(Header)

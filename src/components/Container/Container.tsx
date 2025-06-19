@@ -1,16 +1,16 @@
-import React from 'react'
+import { memo, type HTMLAttributes, type ReactNode } from 'react'
 import clsx from 'clsx'
 import styles from './Container.module.css'
 
 type AllowedTags = 'div' | 'header' | 'footer' | 'main' | 'section'
 
-type ContainerProps = {
+interface ContainerProps extends HTMLAttributes<HTMLElement> {
   tag?: AllowedTags
   fullWidth?: boolean
   className?: string
   innerClassName?: string
-  children: React.ReactNode
-} & React.HTMLAttributes<HTMLElement>
+  children: ReactNode
+}
 
 const Container = ({
   tag: Tag = 'div',
@@ -33,4 +33,4 @@ const Container = ({
   )
 }
 
-export default Container
+export default memo(Container)
