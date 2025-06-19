@@ -46,7 +46,7 @@
 
 .title {
     color: #222;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.4;
     transition: 180ms ease-in-out;
@@ -54,7 +54,7 @@
 
 .location {
     color: #666;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.4;
     transition: 80ms ease-in-out;

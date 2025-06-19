@@ -101,5 +101,12 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 10px;
     flex: 1 0 0;
-    align-self: stretch;;
+    align-self: stretch;
 }
+
+@media (max-width: 600px) {
+    .main {
+        padding: 24px;
+    }
+}
+
