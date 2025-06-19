@@ -1,4 +1,4 @@
-import { type Config } from 'prettier';
+import { type Config } from 'prettier'
 
 const config: Config = {
   trailingComma: 'es5',
@@ -7,7 +7,7 @@ const config: Config = {
   printWidth: 100,
   tabWidth: 2,
   bracketSpacing: true,
-  arrowParens: 'always'
-};
+  arrowParens: 'always',
+}
 
-export default config;
+export default config
