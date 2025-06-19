@@ -3,16 +3,18 @@ import { CheckIcon, GlobeIcon, HomeIcon } from '@radix-ui/react-icons'
 import { useEffect, useState } from 'react'
 import type { Logement } from '@/types/global.type.ts'
 import HousingCard from '@/components/HousingCard/HousingCard.tsx'
+import { getLogements } from '@/api/logements.ts'
 
 const Home = () => {
   const [logements, setLogements] = useState<Logement[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    // Fetch logements from the JSON file
-    fetch('/data/logements.json')
-      .then((response) => response.json())
+    getLogements()
       .then((data) => setLogements(data))
-      .catch((error) => console.error('Failed to fetch logements:', error))
+      .catch(() => setError('Failed to fetch logements'))
+      .finally(() => setLoading(false))
   }, [])
 
   return (
@@ -41,8 +43,11 @@ const Home = () => {
       </div>
       <div className={styles.content}>
         <h3>Logements</h3>
+        {loading && <p>Chargement...</p>}
+        {error && <p className={styles.error}>{error}</p>}
         <div className={styles.grid}>
-          {logements.length > 0 &&
+          {!loading &&
+            !error &&
             logements
               .slice(0, 10)
               .map((logement) => <HousingCard key={logement.id} logement={logement} />)}

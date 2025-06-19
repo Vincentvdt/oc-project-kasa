@@ -12,6 +12,11 @@
     background: #EDEBE9;
 }
 
+.error {
+    color: #c00;
+    padding: 8px 0;
+}
+
 .sectionHeader {
     display: flex;
     gap: 64px;
