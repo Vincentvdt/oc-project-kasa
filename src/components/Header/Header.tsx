@@ -6,9 +6,10 @@ import clsx from 'clsx'
 import { Link, NavLink } from 'react-router-dom'
 import Container from '@/components/Container/Container.tsx'
 import { PersonIcon } from '@radix-ui/react-icons'
-import { memo } from 'react'
+import { memo, useEffect } from 'react'
 
 const Header = () => {
+  useEffect(() => {}, [])
   return (
     <Container tag="header" fullWidth className={styles.root} innerClassName={styles.inner}>
       <div className={styles.left}>
