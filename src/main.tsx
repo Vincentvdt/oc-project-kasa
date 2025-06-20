@@ -32,7 +32,6 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: '/oc-project-kasa' }
 )
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
